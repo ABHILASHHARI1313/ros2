@@ -1,0 +1,117 @@
+[0.000000] (-) TimerEvent: {}
+[0.000207] (-) JobUnselected: {'identifier': 'my_py_pkg'}
+[0.000340] (my_cpp_pkg) JobQueued: {'identifier': 'my_cpp_pkg', 'dependencies': OrderedDict()}
+[0.000411] (my_cpp_pkg) JobStarted: {'identifier': 'my_cpp_pkg'}
+[0.006585] (my_cpp_pkg) JobProgress: {'identifier': 'my_cpp_pkg', 'progress': 'cmake'}
+[0.006973] (my_cpp_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg', '-DCMAKE_INSTALL_PREFIX=/home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg'], 'cwd': '/home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1002/default,35836,1'), ('LANGUAGE', 'en_IN:en'), ('USER', 'abhilash-ts434'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/abhilash-ts434'), ('OLDPWD', '/home/abhilash-ts434/Documents/ros2_ws/src'), ('TERM_PROGRAM_VERSION', '3.2a'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '3573'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1002/bus,guid=fdd97c47ec1dfc87f8a18bf467bd36c8'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/abhilash-ts434/Documents/ros2_ws/install:/home/abhilash-ts434/Documents/ros2_ws/src/install/my_cpp_pkg/lib/my_cpp_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'abhilash-ts434'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'abhilash-ts434'), ('TERM', 'screen'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/abhilash-ts434:@/tmp/.ICE-unix/3573,unix/abhilash-ts434:/tmp/.ICE-unix/3573'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5461b92f_369e_4b59_8538_9b492588cf39'), ('XDG_RUNTIME_DIR', '/run/user/1002'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1002/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.123'), ('TERM_PROGRAM', 'tmux'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1002/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1002/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('RMW_FASTRTPS_LOG_LEVEL', 'DEBUG'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1002/bus,guid=fdd97c47ec1dfc87f8a18bf467bd36c8'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('TMUX_PANE', '%2'), ('CMAKE_PREFIX_PATH', '/home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[0.077780] (my_cpp_pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099901] (-) TimerEvent: {}
+[0.139111] (my_cpp_pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.146089] (my_cpp_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.195891] (my_cpp_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.199993] (-) TimerEvent: {}
+[0.200704] (my_cpp_pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.200996] (my_cpp_pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.201468] (my_cpp_pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.204224] (my_cpp_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.261121] (my_cpp_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.265935] (my_cpp_pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.266085] (my_cpp_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.266429] (my_cpp_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.268900] (my_cpp_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.300099] (-) TimerEvent: {}
+[0.371090] (my_cpp_pkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.400180] (-) TimerEvent: {}
+[0.439279] (my_cpp_pkg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.478122] (my_cpp_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.482081] (my_cpp_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.491755] (my_cpp_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.500231] (-) TimerEvent: {}
+[0.502115] (my_cpp_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.514674] (my_cpp_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.548407] (my_cpp_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.550582] (my_cpp_pkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.600354] (-) TimerEvent: {}
+[0.612537] (my_cpp_pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.629587] (my_cpp_pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.651863] (my_cpp_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.658299] (my_cpp_pkg) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.700473] (-) TimerEvent: {}
+[0.706732] (my_cpp_pkg) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.707164] (my_cpp_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.759587] (my_cpp_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.760300] (my_cpp_pkg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.800575] (-) TimerEvent: {}
+[0.848648] (my_cpp_pkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.850176] (my_cpp_pkg) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at CMakeLists.txt:12 (add_executable):\n'}
+[0.850276] (my_cpp_pkg) StderrLine: {'line': b'  Policy CMP0115 is not set: Source file extensions must be explicit.  Run\n'}
+[0.850322] (my_cpp_pkg) StderrLine: {'line': b'  "cmake --help-policy CMP0115" for policy details.  Use the cmake_policy\n'}
+[0.850360] (my_cpp_pkg) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[0.850397] (my_cpp_pkg) StderrLine: {'line': b'\n'}
+[0.850434] (my_cpp_pkg) StderrLine: {'line': b'  File:\n'}
+[0.850470] (my_cpp_pkg) StderrLine: {'line': b'\n'}
+[0.850506] (my_cpp_pkg) StderrLine: {'line': b'    /home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/first_cpp_node.cpp\n'}
+[0.850544] (my_cpp_pkg) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.850580] (my_cpp_pkg) StderrLine: {'line': b'\x1b[0m\n'}
+[0.854218] (my_cpp_pkg) StdoutLine: {'line': b'-- Generating done\n'}
+[0.856860] (my_cpp_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg\n'}
+[0.864370] (my_cpp_pkg) CommandEnded: {'returncode': 0}
+[0.865345] (my_cpp_pkg) JobProgress: {'identifier': 'my_cpp_pkg', 'progress': 'build'}
+[0.865609] (my_cpp_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg', '--', '-j16', '-l16'], 'cwd': '/home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1002/default,35836,1'), ('LANGUAGE', 'en_IN:en'), ('USER', 'abhilash-ts434'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/abhilash-ts434'), ('OLDPWD', '/home/abhilash-ts434/Documents/ros2_ws/src'), ('TERM_PROGRAM_VERSION', '3.2a'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '3573'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1002/bus,guid=fdd97c47ec1dfc87f8a18bf467bd36c8'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/abhilash-ts434/Documents/ros2_ws/install:/home/abhilash-ts434/Documents/ros2_ws/src/install/my_cpp_pkg/lib/my_cpp_pkg/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'abhilash-ts434'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'abhilash-ts434'), ('TERM', 'screen'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/abhilash-ts434:@/tmp/.ICE-unix/3573,unix/abhilash-ts434:/tmp/.ICE-unix/3573'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/5461b92f_369e_4b59_8538_9b492588cf39'), ('XDG_RUNTIME_DIR', '/run/user/1002'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1002/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.123'), ('TERM_PROGRAM', 'tmux'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1002/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1002/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('RMW_FASTRTPS_LOG_LEVEL', 'DEBUG'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1002/bus,guid=fdd97c47ec1dfc87f8a18bf467bd36c8'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('TMUX_PANE', '%2'), ('CMAKE_PREFIX_PATH', '/home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[0.898654] (my_cpp_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/cpp_node.dir/src/first_cpp_node.cpp.o\x1b[0m\n'}
+[0.900628] (-) TimerEvent: {}
+[1.000843] (-) TimerEvent: {}
+[1.101150] (-) TimerEvent: {}
+[1.201412] (-) TimerEvent: {}
+[1.301734] (-) TimerEvent: {}
+[1.402059] (-) TimerEvent: {}
+[1.502333] (-) TimerEvent: {}
+[1.602659] (-) TimerEvent: {}
+[1.703005] (-) TimerEvent: {}
+[1.803346] (-) TimerEvent: {}
+[1.903710] (-) TimerEvent: {}
+[2.004041] (-) TimerEvent: {}
+[2.104377] (-) TimerEvent: {}
+[2.204710] (-) TimerEvent: {}
+[2.283096] (my_cpp_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/first_cpp_node.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.283272] (my_cpp_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/first_cpp_node.cpp:7:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Kauto\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.283334] (my_cpp_pkg) StderrLine: {'line': b'    7 |     rclcpp::init(argc,argv)\n'}
+[2.283376] (my_cpp_pkg) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.283412] (my_cpp_pkg) StderrLine: {'line': b'      |                            \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[2.283446] (my_cpp_pkg) StderrLine: {'line': b'    8 |     \x1b[32m\x1b[Kauto\x1b[m\x1b[K node = std::make_shared<rclcpp::Node>("cpp_test");\n'}
+[2.283481] (my_cpp_pkg) StderrLine: {'line': b'      |     \x1b[32m\x1b[K~~~~\x1b[m\x1b[K                    \n'}
+[2.285265] (my_cpp_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.285341] (my_cpp_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.285381] (my_cpp_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.285417] (my_cpp_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.285452] (my_cpp_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.285486] (my_cpp_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.285521] (my_cpp_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.285556] (my_cpp_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.285591] (my_cpp_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.285626] (my_cpp_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.285661] (my_cpp_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/first_cpp_node.cpp:3\x1b[m\x1b[K:\n'}
+[2.285695] (my_cpp_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/first_cpp_node.cpp:9:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.285738] (my_cpp_pkg) StderrLine: {'line': b'    9 |     RCLCPP_INFO(\x1b[01;31m\x1b[Knode\x1b[m\x1b[K->get_logger(),"Hello Cpp Node");\n'}
+[2.285773] (my_cpp_pkg) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.285807] (my_cpp_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/first_cpp_node.cpp:9:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.285842] (my_cpp_pkg) StderrLine: {'line': b'    9 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(node->get_logger(),"Hello Cpp Node");\n'}
+[2.285876] (my_cpp_pkg) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.285909] (my_cpp_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/first_cpp_node.cpp:9:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.285942] (my_cpp_pkg) StderrLine: {'line': b'    9 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(node->get_logger(),"Hello Cpp Node");\n'}
+[2.285975] (my_cpp_pkg) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.286009] (my_cpp_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/first_cpp_node.cpp:9:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.286042] (my_cpp_pkg) StderrLine: {'line': b'    9 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(node->get_logger(),"Hello Cpp Node");\n'}
+[2.286078] (my_cpp_pkg) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.287132] (my_cpp_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/first_cpp_node.cpp:10:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.287207] (my_cpp_pkg) StderrLine: {'line': b'   10 |     rclcpp::spin(\x1b[01;31m\x1b[Knode\x1b[m\x1b[K);\n'}
+[2.287250] (my_cpp_pkg) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.304801] (-) TimerEvent: {}
+[2.405132] (-) TimerEvent: {}
+[2.505458] (-) TimerEvent: {}
+[2.565138] (my_cpp_pkg) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/cpp_node.dir/build.make:76: CMakeFiles/cpp_node.dir/src/first_cpp_node.cpp.o] Error 1\n'}
+[2.565402] (my_cpp_pkg) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/cpp_node.dir/all] Error 2\n'}
+[2.565648] (my_cpp_pkg) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[2.567457] (my_cpp_pkg) CommandEnded: {'returncode': 2}
+[2.574959] (my_cpp_pkg) JobEnded: {'identifier': 'my_cpp_pkg', 'rc': 2}
+[2.585423] (-) EventReactorShutdown: {}

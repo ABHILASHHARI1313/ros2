@@ -1,0 +1,27 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/oop_cpp_node.cpp:3[m[K:
+[01m[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/oop_cpp_node.cpp:[m[K In constructor ‘[01m[KMyNode::MyNode()[m[K’:
+[01m[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/oop_cpp_node.cpp:10:21:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope; did you mean ‘[01m[KNode[m[K’?
+   10 |         RCLCPP_INFO([01;31m[Knode[m[K->get_logger(),"Hello Cpp Node");
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/oop_cpp_node.cpp:10:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   10 |         [01;31m[KRCLCPP_INFO[m[K(node->get_logger(),"Hello Cpp Node");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/oop_cpp_node.cpp:10:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   10 |         [01;31m[KRCLCPP_INFO[m[K(node->get_logger(),"Hello Cpp Node");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/oop_cpp_node.cpp:10:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   10 |         [01;31m[KRCLCPP_INFO[m[K(node->get_logger(),"Hello Cpp Node");
+      |         [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/oop_node.dir/build.make:76: CMakeFiles/oop_node.dir/src/oop_cpp_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/oop_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

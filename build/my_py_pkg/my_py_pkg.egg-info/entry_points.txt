@@ -1,0 +1,4 @@
+[console_scripts]
+oop_node = my_py_pkg.oop_first_node:main
+py_node = my_py_pkg.my_first_node:main
+
