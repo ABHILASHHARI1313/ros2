@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "my_robot_interfaces__py",
+		"source" : "/home/abhilash-ts434/Documents/ros2_ws/build/my_robot_interfaces/my_robot_interfaces__py"
+	}
+}

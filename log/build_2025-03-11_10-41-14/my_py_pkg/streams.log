@@ -1,0 +1,34 @@
+[0.393s] Invoking command in '/home/abhilash-ts434/Documents/ros2_ws/src/my_py_pkg': PYTHONPATH=/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_py_pkg build --build-base /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build install --record /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/install.log --single-version-externally-managed install_data
+[0.544s] running egg_info
+[0.544s] writing ../../build/my_py_pkg/my_py_pkg.egg-info/PKG-INFO
+[0.544s] writing dependency_links to ../../build/my_py_pkg/my_py_pkg.egg-info/dependency_links.txt
+[0.544s] writing entry points to ../../build/my_py_pkg/my_py_pkg.egg-info/entry_points.txt
+[0.544s] writing requirements to ../../build/my_py_pkg/my_py_pkg.egg-info/requires.txt
+[0.544s] writing top-level names to ../../build/my_py_pkg/my_py_pkg.egg-info/top_level.txt
+[0.546s] reading manifest file '../../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'
+[0.546s] writing manifest file '../../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'
+[0.546s] running build
+[0.546s] running build_py
+[0.546s] copying my_py_pkg/led_panel.py -> /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg
+[0.547s] running install
+[0.547s] running install_lib
+[0.548s] copying /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg/led_panel.py -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[0.548s] byte-compiling /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/led_panel.py to led_panel.cpython-310.pyc
+[0.549s] running install_data
+[0.549s] running install_egg_info
+[0.550s] removing '/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[0.550s] Copying ../../build/my_py_pkg/my_py_pkg.egg-info to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg-0.0.0-py3.10.egg-info
+[0.551s] running install_scripts
+[0.564s] Installing add_two_ints_client script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.564s] Installing add_two_ints_client_no_oop script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.564s] Installing add_two_ints_server script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.564s] Installing hw_status_publisher script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.564s] Installing led_panel script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.564s] Installing number_counter script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.564s] Installing number_publisher script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.564s] Installing oop_node script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.564s] Installing py_node script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.564s] Installing robot_news_station script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.564s] Installing smartphone script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.565s] writing list of installed files to '/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/install.log'
+[0.578s] Invoked command in '/home/abhilash-ts434/Documents/ros2_ws/src/my_py_pkg' returned '0': PYTHONPATH=/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_py_pkg build --build-base /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build install --record /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/install.log --single-version-externally-managed install_data

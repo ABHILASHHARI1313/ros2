@@ -10,7 +10,7 @@ class MyNode(Node):
     
     def term_callback(self):
         self.counter += 1
-        self.get_logger().info("Hello Friend "+str(self.counter))
+        self.get_logger().info("Hello Friend !!"+str(self.counter))
 
 def main(args=None):
     rclpy.init()

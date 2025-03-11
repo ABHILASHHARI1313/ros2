@@ -1,0 +1,55 @@
+[0.398s] Invoking command in '/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg': PYTHONPATH=/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build
+[0.559s] running develop
+[0.670s] Removing /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my-py-pkg.egg-link (link to .)
+[0.684s] Invoked command in '/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg' returned '0': PYTHONPATH=/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build
+[0.685s] Invoking command in '/home/abhilash-ts434/Documents/ros2_ws/src/my_py_pkg': PYTHONPATH=/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_py_pkg build --build-base /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build install --record /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/install.log --single-version-externally-managed install_data --force
+[0.832s] running egg_info
+[0.832s] writing ../../build/my_py_pkg/my_py_pkg.egg-info/PKG-INFO
+[0.832s] writing dependency_links to ../../build/my_py_pkg/my_py_pkg.egg-info/dependency_links.txt
+[0.833s] writing entry points to ../../build/my_py_pkg/my_py_pkg.egg-info/entry_points.txt
+[0.833s] writing requirements to ../../build/my_py_pkg/my_py_pkg.egg-info/requires.txt
+[0.833s] writing top-level names to ../../build/my_py_pkg/my_py_pkg.egg-info/top_level.txt
+[0.834s] reading manifest file '../../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'
+[0.835s] writing manifest file '../../build/my_py_pkg/my_py_pkg.egg-info/SOURCES.txt'
+[0.835s] running build
+[0.835s] running build_py
+[0.835s] copying my_py_pkg/add_two_ints_client_no_oop.py -> /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg
+[0.835s] running install
+[0.836s] running install_lib
+[0.836s] creating /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[0.836s] copying /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg/add_two_ints_client.py -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[0.836s] copying /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg/add_two_ints_server.py -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[0.836s] copying /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg/add_two_ints_client_no_oop.py -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[0.836s] copying /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg/oop_first_node.py -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[0.836s] copying /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg/number_counter.py -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[0.836s] copying /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg/smartphone.py -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[0.836s] copying /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg/my_first_node.py -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[0.837s] copying /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg/robot_news_station.py -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[0.837s] copying /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg/__init__.py -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[0.837s] copying /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build/lib/my_py_pkg/number_publisher.py -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg
+[0.837s] byte-compiling /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/add_two_ints_client.py to add_two_ints_client.cpython-310.pyc
+[0.837s] byte-compiling /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/add_two_ints_server.py to add_two_ints_server.cpython-310.pyc
+[0.838s] byte-compiling /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/add_two_ints_client_no_oop.py to add_two_ints_client_no_oop.cpython-310.pyc
+[0.838s] byte-compiling /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/oop_first_node.py to oop_first_node.cpython-310.pyc
+[0.838s] byte-compiling /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/number_counter.py to number_counter.cpython-310.pyc
+[0.838s] byte-compiling /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/smartphone.py to smartphone.cpython-310.pyc
+[0.838s] byte-compiling /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/my_first_node.py to my_first_node.cpython-310.pyc
+[0.839s] byte-compiling /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/robot_news_station.py to robot_news_station.cpython-310.pyc
+[0.839s] byte-compiling /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/__init__.py to __init__.cpython-310.pyc
+[0.839s] byte-compiling /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg/number_publisher.py to number_publisher.cpython-310.pyc
+[0.839s] running install_data
+[0.839s] copying resource/my_py_pkg -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/share/ament_index/resource_index/packages
+[0.839s] copying package.xml -> /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/share/my_py_pkg
+[0.839s] running install_egg_info
+[0.840s] Copying ../../build/my_py_pkg/my_py_pkg.egg-info to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my_py_pkg-0.0.0-py3.10.egg-info
+[0.841s] running install_scripts
+[0.854s] Installing add_two_ints_client_no_oop script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.854s] Installing add_two_ints_server script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.854s] Installing number_counter script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.854s] Installing number_publisher script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.855s] Installing oop_node script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.855s] Installing py_node script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.855s] Installing robot_news_station script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.855s] Installing smartphone script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.855s] writing list of installed files to '/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/install.log'
+[0.869s] Invoked command in '/home/abhilash-ts434/Documents/ros2_ws/src/my_py_pkg' returned '0': PYTHONPATH=/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_py_pkg build --build-base /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build install --record /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/install.log --single-version-externally-managed install_data --force

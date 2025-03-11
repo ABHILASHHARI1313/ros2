@@ -1,0 +1,24 @@
+[0.396s] Invoking command in '/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg': PYTHONPATH=/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build --no-deps symlink_data
+[0.557s] running develop
+[0.667s] running egg_info
+[0.667s] writing my_py_pkg.egg-info/PKG-INFO
+[0.667s] writing dependency_links to my_py_pkg.egg-info/dependency_links.txt
+[0.668s] writing entry points to my_py_pkg.egg-info/entry_points.txt
+[0.668s] writing requirements to my_py_pkg.egg-info/requires.txt
+[0.668s] writing top-level names to my_py_pkg.egg-info/top_level.txt
+[0.670s] reading manifest file 'my_py_pkg.egg-info/SOURCES.txt'
+[0.670s] writing manifest file 'my_py_pkg.egg-info/SOURCES.txt'
+[0.671s] running build_ext
+[0.671s] Creating /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages/my-py-pkg.egg-link (link to .)
+[0.672s] Installing add_two_ints_server script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.672s] Installing add_two_nts_client_no_oop script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.672s] Installing number_counter script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.672s] Installing number_publisher script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.673s] Installing oop_node script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.673s] Installing py_node script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.673s] Installing robot_news_station script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.673s] Installing smartphone script to /home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/my_py_pkg
+[0.673s] 
+[0.673s] Installed /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg
+[0.673s] running symlink_data
+[0.689s] Invoked command in '/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg' returned '0': PYTHONPATH=/home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/abhilash-ts434/Documents/ros2_ws/build/my_py_pkg/build --no-deps symlink_data
