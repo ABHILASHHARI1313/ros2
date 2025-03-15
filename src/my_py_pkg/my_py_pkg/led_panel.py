@@ -6,7 +6,8 @@ class MyNode(Node):
     def __init__(self):
         self.counter = 0
         super().__init__("led_panel")
-        self.led_states = [0,0,0]
+        self.declare_parameter("led_states")
+        self.led_states = self.get_parameter("led_states").value
         self.led_state_publisher = self.create_publisher(LEDPanelState,"led_states",10)
         self.led_states_timer = self.create_timer(4,self.publish_led_states)
         self.set_led_service = self.create_service(SetLEDState,"set_led",self.callback_set_led)

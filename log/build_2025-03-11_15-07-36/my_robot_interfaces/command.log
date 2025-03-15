@@ -1,0 +1,1 @@
+Invoking command in '/home/abhilash-ts434/Documents/ros2_ws/build/my_robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/abhilash-ts434/Documents/ros2_ws/build/my_robot_interfaces -- -j16 -l16

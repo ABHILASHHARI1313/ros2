@@ -1,0 +1,23 @@
+[0.010s] Invoking command in '/home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg -- -j16 -l16
+[0.033s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.129s] -- Configuring incomplete, errors occurred!
+[0.129s] See also "/home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg/CMakeFiles/CMakeOutput.log".
+[0.129s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.129s]   By not providing "Findrclcpp.cmake" in CMAKE_MODULE_PATH this project has
+[0.129s]   asked CMake to find a package configuration file provided by "rclcpp", but
+[0.129s]   CMake did not find one.
+[0.129s] 
+[0.129s]   Could not find a package configuration file provided by "rclcpp" with any
+[0.129s]   of the following names:
+[0.129s] 
+[0.129s]     rclcppConfig.cmake
+[0.129s]     rclcpp-config.cmake
+[0.129s] 
+[0.129s]   Add the installation prefix of "rclcpp" to CMAKE_PREFIX_PATH or set
+[0.129s]   "rclcpp_DIR" to a directory containing one of the above files.  If "rclcpp"
+[0.129s]   provides a separate development package or SDK, be sure it has been
+[0.130s]   installed.
+[0.130s] 
+[0.130s] [0m
+[0.130s] gmake: *** [Makefile:308: cmake_check_build_system] Error 1
+[0.132s] Invoked command in '/home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg -- -j16 -l16

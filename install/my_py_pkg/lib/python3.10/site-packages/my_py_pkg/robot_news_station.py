@@ -8,7 +8,8 @@ class RobotNewsStationNode(Node):
     def __init__(self):
         self.counter = 0
         super().__init__("robot_news_station")
-        self.robot_name = "3PO"
+        self.declare_parameter("robot_name")
+        self.robot_name = self.get_parameter("robot_name").value
         self.publisher = self.create_publisher(String,"robot_news",10)
         self.timer = self.create_timer(0.5,self.publish_news)
         self.get_logger().info("Robot news station has been started")
