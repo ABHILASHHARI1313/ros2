@@ -1,0 +1,88 @@
+<?xml version ="1.0"?>
+<robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="base_length" value="0.6"/>
+    <xacro:property name="base_width" value="0.4"/>
+    <xacro:property name="base_height" value="0.2"/>
+    <xacro:property name="wheel_radius" value="0.1"/>
+    <xacro:property name="wheel_length" value="0.05"/>
+    
+    <xacro:macro name="example_macro" params="a b c">
+        <link name="dummy_link">
+            <visual>
+                <geometry>
+                    <box size="${a} ${b} ${c}"/>
+                </geometry>
+            </visual>
+        </link>
+    </xacro:macro>
+
+    <xacro:example_macro a="2" b ="3" c="4"/>
+
+    <material name="green">
+        <color rgba="0 0.5 0 1"/>
+    </material>
+    <material name="grey">
+        <color rgba="0.5 0.5 0.5 1"/>
+    </material>
+    <link name="base_link">
+        <visual>
+            <geometry >
+                <box size="${base_length} ${base_width}  ${base_height}" />
+            </geometry>
+            <origin xyz ="0 0 0.1" rpy="0 0 0" />
+            <material name="green" />
+        </visual>
+    </link>
+
+    <xacro:macro name="wheel_link" params="prefix">
+       <link name="${prefix}_wheel_link">
+            <visual>
+                <geometry>
+                    <cylinder radius="${wheel_radius}" length="${wheel_length}"/>
+                </geometry>
+                <origin xyz="0 0 0" rpy="${pi/2.0} 0 0"/>
+                <material name="grey"/>
+            </visual>
+       </link>
+    </xacro:macro>
+
+    <xacro:wheel_link prefix="rear_right"/>
+    <xacro:wheel_link prefix="rear_left"/>
+    <xacro:wheel_link prefix="front_left"/>
+    <xacro:wheel_link prefix="front_right"/>
+    
+    <link name="base_footprint"/> 
+
+    <joint name="base_front_right_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="front_right_wheel_link"/>
+        <origin xyz="${base_length/4.0} -${(base_width/2.0)+ (wheel_length/2.0)} 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="base_front_left_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="front_left_wheel_link"/>
+        <origin xyz="${base_length/4.0} ${(base_width/2.0)+ (wheel_length/2.0)} 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0" />
+    </joint>
+
+    <joint name="base_rear_right_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="rear_right_wheel_link"/>
+        <origin xyz="-${base_length/4.0} -${(base_width/2.0)+ (wheel_length/2.0)} 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="base_rear_left_wheel_joint" type="continuous">
+        <parent link="base_link"/>
+        <child link="rear_left_wheel_link"/>
+        <origin xyz="-${base_length/4.0}  ${(base_width/2.0)+ (wheel_length/2.0)} 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+        <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0"/>
+    </joint>
+
+</robot>

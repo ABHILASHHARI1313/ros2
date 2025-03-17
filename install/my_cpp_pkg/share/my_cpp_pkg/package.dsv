@@ -1,8 +1,1 @@
-source;share/my_cpp_pkg/hook/cmake_prefix_path.ps1
-source;share/my_cpp_pkg/hook/cmake_prefix_path.dsv
-source;share/my_cpp_pkg/hook/cmake_prefix_path.sh
-source;share/my_cpp_pkg/local_setup.bash
-source;share/my_cpp_pkg/local_setup.dsv
-source;share/my_cpp_pkg/local_setup.ps1
-source;share/my_cpp_pkg/local_setup.sh
-source;share/my_cpp_pkg/local_setup.zsh
+/home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg/ament_cmake_environment_hooks/package.dsv

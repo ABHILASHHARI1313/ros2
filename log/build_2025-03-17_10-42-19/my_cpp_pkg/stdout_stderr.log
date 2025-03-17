@@ -1,0 +1,57 @@
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.11 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Configuring done
+[33mCMake Warning (dev) at CMakeLists.txt:12 (add_executable):
+  Policy CMP0115 is not set: Source file extensions must be explicit.  Run
+  "cmake --help-policy CMP0115" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  File:
+
+    /home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/first_cpp_node.cpp
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at CMakeLists.txt:13 (add_executable):
+  Policy CMP0115 is not set: Source file extensions must be explicit.  Run
+  "cmake --help-policy CMP0115" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  File:
+
+    /home/abhilash-ts434/Documents/ros2_ws/src/my_cpp_pkg/src/oop_cpp_node.cpp
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+-- Generating done
+-- Build files have been written to: /home/abhilash-ts434/Documents/ros2_ws/build/my_cpp_pkg
+[35m[1mConsolidate compiler generated dependencies of target oop_node[0m
+[35m[1mConsolidate compiler generated dependencies of target cpp_node[0m
+[100%] Built target cpp_node
+[100%] Built target oop_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/lib/my_cpp_pkg/cpp_node
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/lib/my_cpp_pkg/oop_node
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/ament_index/resource_index/package_run_dependencies/my_cpp_pkg
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/ament_index/resource_index/parent_prefix_path/my_cpp_pkg
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/my_cpp_pkg/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/my_cpp_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/my_cpp_pkg/environment/path.sh
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/my_cpp_pkg/environment/path.dsv
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/my_cpp_pkg/local_setup.bash
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/my_cpp_pkg/local_setup.sh
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/my_cpp_pkg/local_setup.zsh
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/my_cpp_pkg/local_setup.dsv
+-- Symlinking: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/my_cpp_pkg/package.dsv
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/ament_index/resource_index/packages/my_cpp_pkg
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/my_cpp_pkg/cmake/my_cpp_pkgConfig.cmake
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/my_cpp_pkg/cmake/my_cpp_pkgConfig-version.cmake
+-- Up-to-date symlink: /home/abhilash-ts434/Documents/ros2_ws/install/my_cpp_pkg/share/my_cpp_pkg/package.xml

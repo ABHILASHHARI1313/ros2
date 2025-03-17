@@ -1,0 +1,8 @@
+[  1%] Built target my_robot_interfaces__cpp
+[ 12%] Built target my_robot_interfaces__rosidl_generator_c
+[35m[1mConsolidate compiler generated dependencies of target my_robot_interfaces__rosidl_typesupport_introspection_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target my_robot_interfaces__rosidl_typesupport_cpp[0m
+[35m[1mConsolidate compiler generated dependencies of target my_robot_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[ 40%] Built target my_robot_interfaces__rosidl_typesupport_cpp
+[ 45%] Built target my_robot_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 45%] Built target my_robot_interfaces__rosidl_typesupport_introspection_cpp

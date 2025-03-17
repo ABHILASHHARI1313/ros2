@@ -1,0 +1,30 @@
+{
+  "package_name": "my_robot_interfaces",
+  "output_dir": "/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces/rosidl_generator_c/my_robot_interfaces",
+  "template_dir": "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource",
+  "idl_tuples": [
+    "/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:msg/HardwareStatus.idl",
+    "/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:msg/LEDPanelState.idl",
+    "/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:srv/ComputeRectangleArea.idl",
+    "/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:srv/SetLEDState.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c",
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../../../local/lib/python3.10/dist-packages/rosidl_generator_c/__init__.py",
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/action__type_support.h.em",
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/idl.h.em",
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/idl__functions.c.em",
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/idl__functions.h.em",
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/idl__struct.h.em",
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/idl__type_support.h.em",
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/msg__functions.c.em",
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/msg__functions.h.em",
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/msg__struct.h.em",
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/msg__type_support.h.em",
+    "/opt/ros/humble/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
+    "/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces/msg/HardwareStatus.idl",
+    "/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces/msg/LEDPanelState.idl",
+    "/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces/srv/ComputeRectangleArea.idl",
+    "/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces/srv/SetLEDState.idl"
+  ]
+}
