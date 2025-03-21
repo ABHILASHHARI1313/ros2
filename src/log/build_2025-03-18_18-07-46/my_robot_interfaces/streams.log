@@ -1,0 +1,28 @@
+[0.013s] Invoking command in '/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/abhilash-ts434/Documents/ros2_ws/src/my_robot_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/abhilash-ts434/Documents/ros2_ws/src/install/my_robot_interfaces
+[0.023s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.109s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.115s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.117s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.120s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.149s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.358s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.498s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.679s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.696s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.712s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.712s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.712s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.732s] -- Configuring done
+[0.761s] -- Generating done
+[0.769s] -- Build files have been written to: /home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces
+[0.774s] Invoked command in '/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/abhilash-ts434/Documents/ros2_ws/src/my_robot_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/abhilash-ts434/Documents/ros2_ws/src/install/my_robot_interfaces
+[0.775s] Invoking command in '/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces -- -j16 -l16
+[0.805s] [35m[1mConsolidate compiler generated dependencies of target my_robot_interfaces__rosidl_generator_c[0m
+[0.812s] failed to create symbolic link '/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces/ament_cmake_python/my_robot_interfaces/my_robot_interfaces' because existing path cannot be removed: Is a directory
+[0.813s] [  1%] Built target my_robot_interfaces__cpp
+[0.813s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_my_robot_interfaces.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_my_robot_interfaces] Error 1
+[0.813s] gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_my_robot_interfaces.dir/all] Error 2
+[0.813s] gmake[1]: *** Waiting for unfinished jobs....
+[0.815s] [ 12%] Built target my_robot_interfaces__rosidl_generator_c
+[0.816s] gmake: *** [Makefile:146: all] Error 2
+[0.818s] Invoked command in '/home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/abhilash-ts434/Documents/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/abhilash-ts434/Documents/ros2_ws/src/build/my_robot_interfaces -- -j16 -l16
