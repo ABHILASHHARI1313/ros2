@@ -1,0 +1,41 @@
+<launch>
+        <let name="urdf_path" value="$(find-pkg-share cart_description)/urdf/invpend.urdf.xacro"/>
+
+        <!-- Generate the URDF using xacro and store it in robot_description -->
+        <let name="robot_description" value="$(command 'xacro $(var urdf_path)')" />
+
+        <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui">
+        </node>
+
+        <include file="$(find-pkg-share gazebo_ros)/launch/gazebo.launch.py">
+                <arg name="world" value="$(find-pkg-share cart_display)/worlds/invpend.world"/>
+        </include>
+
+        <node pkg="gazebo_ros" exec="spawn_entity.py" args="-topic robot_description -entity my_robot"/>
+
+
+        <node pkg="controller_manager" exec="ros2_control_node" output="screen">
+                <param name="use_sim_time" value="true"/>
+                <param name="robot_description"  value="true"/>
+                <param from="$(find-pkg-share cart_description)/config/my_controllers.yaml"/>
+        </node>
+         <!-- Robot State Publisher -->
+        <node pkg="robot_state_publisher" exec="robot_state_publisher">
+                <param name="robot_description" value="$(var robot_description)"/>
+        </node>
+
+        <!-- Wait for controller manager to be ready -->
+        <node pkg="controller_manager" exec="spawner" args="joint_state_broadcaster" output="screen"/>
+
+        <!-- Wait before activating effort_controller -->
+        <node pkg="ros2_launch_utils" exec="sleep" args="5"/>  <!-- Wait for 5 seconds -->
+
+        <node pkg="controller_manager" exec="spawner" args="effort_controller" output="screen"/>
+
+        <node pkg="rviz2" exec="rviz2" output="screen" args="-d $(find-pkg-share cart_display)/share/cart_display/rviz/real.rviz"/>
+
+
+
+
+
+</launch>
