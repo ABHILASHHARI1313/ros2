@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot>
+
+  <!-- Slider Link -->
+  <gazebo reference="slidebar">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <!-- Cart Link -->
+  <gazebo reference="cart">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+  <!-- Pole Link -->
+  <gazebo reference="pole">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+</robot>
