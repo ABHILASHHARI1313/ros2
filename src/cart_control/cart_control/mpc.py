@@ -50,12 +50,12 @@ nx, nu = B_zoh.shape
 Q = sparse.diags([10.0, 5.0, 100.0, 5.0]).toarray()
 R = np.array([[0.1]])
 
-xr = np.array([2.0, 0.0, -1.57, 0.0]).astype(float)  # Desired states
+xr = np.array([2.0, 0.0, 0.0, 0.0]).astype(float)  # Desired states
 
-N = 10 # length of horizon
+N = 20 # length of horizon
 dt = 0.1 # time step
 
-nsim = 5 # number of simulation steps
+nsim = 20 # number of simulation steps
 
 class CartPendulumBalancer(Node):
     def __init__(self):
@@ -63,7 +63,7 @@ class CartPendulumBalancer(Node):
        
         self.publisher = self.create_publisher(Float64MultiArray,'/effort_controller/commands',10)
         self.state_variable_sub = self.create_subscription(JointState,'/joint_states',self.joint_state_callback,10)
-        self.x0 = np.array([0.0, 0.0, -1.57, 0.0]).astype(float) # Current states
+        self.x0 = np.array([0.0, 0.0, 0.0, 0.0]).astype(float) # Current states
         # self.timer = self.create_timer(dt,self.balance)
         self.angle_change = []
 
@@ -84,6 +84,7 @@ class CartPendulumBalancer(Node):
 
         cost = 0.0
         x_init.value = self.x0
+        # self.get_logger().info(str(x_init.value))
         constr = [x[:, 0] == x_init]
         for t in range(N):
             cost += cp.quad_form(xr - x[:, t], Q) + cp.quad_form(u[:, t], R)
@@ -97,15 +98,19 @@ class CartPendulumBalancer(Node):
         except Exception as e:
             self.get_logger().info(f"MPC error : {e}")
             return
+        
+        # self.get_logger().info(str(x.value))
 
         if u[:,0].value is not None:
             control_command = u[:,0].value
             msg = Float64MultiArray()
             msg.data = [float(control_command)]
-            self.publisher.publish(msg)
-            self.get_logger().info(str(msg))
+            # self.publisher.publish(msg)
+            # self.get_logger().info(str(msg))
         else:
             self.get_logger().info("MPC didn't return a solution")
+
+
 
 
 

@@ -18,6 +18,7 @@ class ForcePublisherNode(Node):
         msg = Float64MultiArray()
         msg.data = [self.force]
         self.publisher_.publish(msg)
+        exit(0)
         self.get_logger().info(f'Publishing force: {msg.data}')
 
 def main(args=None):

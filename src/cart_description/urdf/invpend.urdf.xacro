@@ -57,7 +57,7 @@
     <child link="cart"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit effort="100.0" lower="-3.5" upper="3.5" velocity="10.0"/>
+    <limit effort="1000.0" lower="-3.5" upper="3.5" velocity="100.0"/>
     <dynamics damping="0.0"/>
     <transmission name="transmission_slider">
       <type>transmission_interface/SimpleTransmission</type>
@@ -103,18 +103,8 @@
     <child link="pole"/>
     <origin xyz="0 ${-depth/2-radius-radius_pole/2} ${height/4}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit effort="100.0" lower="${-PI}" upper = "${PI}" velocity="10.0"/>
+    <limit effort="100.0" lower="${-PI}" upper = "${PI}" velocity="100.0"/>
     <dynamics damping="0.0" friction="0.0"/>
-    <transmission name="transmission_pole">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="cart_to_pole">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="pole_motor">
-        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-  </transmission>
   </joint>
 
   <!-- Pole Link -->

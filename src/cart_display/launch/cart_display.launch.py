@@ -91,12 +91,6 @@ def generate_launch_description():
             shell=True
         ),
 
-        ExecuteProcess(
-            cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', ' joint_effort_controller'],
-            output='screen',
-            shell=True
-        ),
-
 
         # Launch RViz with the provided configuration
         Node(

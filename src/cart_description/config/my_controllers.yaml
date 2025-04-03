@@ -2,26 +2,23 @@ controller_manager:
   ros__parameters:
     update_rate: 10  # Hz
 
+
     effort_controller:
       type: effort_controllers/JointGroupEffortController
-
+    
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
-      joints:
-        - cart_to_pole
-
-    joint_effort_controller:
-      type: effort_controllers/JointGroupEffortController
-
+      joints: [slider_to_cart, cart_to_pole]
+       
 effort_controller:
   ros__parameters:
     joints:
       - slider_to_cart
-    
+    gains:
+      cart_to_pole:  # Required for effort controllers
+        p: 100.0
+        i: 0.01
+        d: 10.0
 
-joint_effort_controller:
-  ros__parameters:
-    joints:
-      - cart_to_pole
-    
+
 
