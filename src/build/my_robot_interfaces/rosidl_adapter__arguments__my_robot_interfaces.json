@@ -1,9 +1,0 @@
-{
-  "package_name": "my_robot_interfaces",
-  "non_idl_tuples": [
-    "/home/abhilash-ts434/Documents/ros2_ws/src/my_robot_interfaces:msg/HardwareStatus.msg",
-    "/home/abhilash-ts434/Documents/ros2_ws/src/my_robot_interfaces:msg/LEDPanelState.msg",
-    "/home/abhilash-ts434/Documents/ros2_ws/src/my_robot_interfaces:srv/ComputeRectangleArea.srv",
-    "/home/abhilash-ts434/Documents/ros2_ws/src/my_robot_interfaces:srv/SetLEDState.srv"
-  ]
-}
