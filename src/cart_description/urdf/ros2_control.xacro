@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot>
+
+<ros2_control name="GazeboSystem" type="system">
+    <hardware>
+        <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name= "slider_to_cart">
+        <command_interface name="effort">
+          <param name="min">-1000</param>
+          <param name="max">1000</param>
+        </command_interface>
+        <state_interface name="position">
+          <param name="initial_value">0.0</param>
+        </state_interface>
+        <state_interface name="velocity"/>
+    </joint>
+    <joint name="cart_to_pole">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+         <param name="initial_value">0.0</param>
+      <state_interface name="velocity"/>
+    </joint>
+
+</ros2_control>
+
+  <gazebo>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+    <robot_param>robot_description</robot_param>
+    <robot_param_node>robot_state_publisher</robot_param_node>
+    <parameters>/home/abhilash-ts434/cart/install/cart_description/share/cart_description/config/my_controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+   
+</robot>
