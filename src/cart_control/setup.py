@@ -23,7 +23,8 @@ setup(
             'get_angle = cart_control.get_angle:main',
             'mpc = cart_control.mpc:main',
             'force = cart_control.force:main',
-            'test = cart_control.test:main'
+            'test = cart_control.test:main',
+            'timer = cart_control.timer:main',
         ],
     },
 )
