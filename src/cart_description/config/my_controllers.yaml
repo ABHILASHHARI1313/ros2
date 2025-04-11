@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 10  # Hz
+    update_rate: 100  # Hz
 
 
     effort_controller:
@@ -14,11 +14,7 @@ effort_controller:
   ros__parameters:
     joints:
       - slider_to_cart
-    gains:
-      cart_to_pole:  # Required for effort controllers
-        p: 100.0
-        i: 0.01
-        d: 10.0
+
 
 
 

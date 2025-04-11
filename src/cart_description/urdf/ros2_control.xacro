@@ -7,8 +7,8 @@
     </hardware>
     <joint name= "slider_to_cart">
         <command_interface name="effort">
-          <param name="min">-1000</param>
-          <param name="max">1000</param>
+          <param name="min">-10</param>
+          <param name="max">10</param>
         </command_interface>
         <state_interface name="position">
           <param name="initial_value">0.0</param>
@@ -17,7 +17,7 @@
     </joint>
     <joint name="cart_to_pole">
       <state_interface name="position"/>
-         <param name="initial_value">0.0</param>
+         <param name="initial_value">1.57</param>
       <state_interface name="velocity"/>
     </joint>
 

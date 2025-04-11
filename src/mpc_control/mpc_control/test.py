@@ -3,6 +3,7 @@ import rclpy
 from rclpy.node import Node
 import control 
 import numpy as np
+import threading
 from std_msgs.msg import String
 from rosgraph_msgs.msg import Clock
 from scipy import sparse
@@ -17,9 +18,9 @@ M = 20  # Cart mass
 m = 2  # Pendulum mass
 b = 0.1  # Coefficient of friction for cart
 l = 0.5  # Length to pendulum center of mass
-I = (m*l**2)*(1/12)  # Mass moment of inertia of the pendulum
+I = (m*l**2)*(1/3)  # Mass moment of inertia of the pendulum
 g = 9.8  # Gravity
-dt = 0.1  # Time step
+dt = 0.2 # Time step
 
 
 p = I*(M+m)+M*m*l**2
@@ -49,13 +50,17 @@ B_zoh = np.array(sys_discrete.B)
 ''' Model Predictive Control implementation using State Space Equation '''
 
 nx, nu = B_zoh.shape
-Q = sparse.diags([10.0, 5.0, 10.0, 5.0]).toarray()
-R = np.array([[0.1]])
+Q_x = np.diag([10.0, 1.0, 100.0, 1.0])     # Strongly penalize θ
+Q_u = np.diag([0.1])                       # Less penalty on effort
+Q_delta_u = np.diag([1.0])                  # Smooth input changes
+Q_terminal = Q_x.copy()                    # Same as Q_x
 
-xr = np.array([2.0, 0.0, 0.0, 0.0]).astype(float)  # Desired states
-
-N = 20 # length of horizon
-dt = 0.1 # time step
+x_ref = np.array([1.0, 0.0, 0.0, 0.0]).astype(float)  # Desired states
+# xr *= -1.0
+N = 30 # length of horizon
+dt = 0.01 # time step
+u_ref = np.array([0.0])
+u_prev = np.array([0.0])
 
 nsim = 20 # number of simulation steps
 
@@ -66,40 +71,66 @@ class CartPendulumBalancer(Node):
         self.state_variable_sub = self.create_subscription(JointState,'/joint_states',self.joint_state_callback,10)
 
         self.x0 = np.array([0.0, 0.0, 0.0, 0.0]).astype(float) # Current states
-        # self.timer = self.create_timer(dt,self.balance)
+        self.timer = self.create_timer(dt,self.balance)
+        self.lock  = threading.Lock()
         self.angle_change = []
 
 
     def joint_state_callback(self,msg):
         current_time = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S.%f')
-        # self.get_logger().info(f"The current time is {current_time}")
-        position = msg.position
-        velocity = msg.velocity
-        self.x0[0] = position[0]
-        self.x0[2] = position[1]
-        self.x0[1] = velocity[0]
-        self.x0[3] = velocity[1]
-        self.get_logger().info(f"The current state is {str(self.x0)}")
+        with self.lock:
+            position = msg.position
+            velocity = msg.velocity
+            self.x0[0] = position[0]
+            self.x0[2] = -position[1]
+            self.x0[1] = velocity[0]
+            self.x0[3] = -velocity[1]
+        self.get_logger().info(f"The current state @  time {current_time} is {str(self.x0)}")
+        # self.get_logger().info(f"The state at time {current_time} is {str(self.x0)}")
         # self.angle_change.append(position[1])
-
+    
+    def balance(self):
         x = cp.Variable((nx, N+1))
         u = cp.Variable((nu, N))
-
+        with self.lock:
+            current_state = self.x0.copy()
         cost = 0.0
         # self.get_logger().info(str(x_init.value))
-        constr = [x[:, 0] == self.x0]
-        for t in range(N):
-            cost += cp.quad_form(xr - x[:, t], Q) + cp.quad_form(u[:, t], R)
-            constr += [cp.norm(u[:, t], 'inf') <= 10.0]
-            constr += [x[:, t + 1] == A_zoh @ x[:, t] + B_zoh @ u[:, t]]
-        cost += cp.quad_form(x[:, N] - xr, Q)
+        # publish_time = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S.%f')
+        # self.get_logger().info(f"The state at time {publish_time} is {str(self.x0)}")
+        constraints = [x[:, 0] == current_state]
+        for k in range(N):
+            # error penalty
+            cost += cp.quad_form(x[:,k]-x_ref,Q_x)
 
-        problem = cp.Problem(cp.Minimize(cost), constr)
+             # control effort penalty
+            cost += cp.quad_form(u[:,k]-u_ref,Q_u)
+
+            # change in u penalty
+            if k == 0:
+                delta_u = u[:,k] - u_prev
+            else:
+                delta_u = u[:,k] - u[:,k-1]
+            cost += cp.quad_form(delta_u,Q_delta_u)
+
+            constraints += [x[:, k+1] == A_zoh @ x[:, k] + B_zoh @ u[:, k]]
+
+            constraints += [cp.norm(u[:, k], 'inf') <= 10.0]
+        
+        cost += cp.quad_form(x[:, N]-x_ref, Q_terminal)
+
+
+        problem = cp.Problem(cp.Minimize(cost), constraints)
         try :
+            solve_start_time = time.perf_counter()
             problem.solve(solver=cp.OSQP, warm_start=True)
+            solve_duration = time.perf_counter() - solve_start_time
+            # self.get_logger().info(f"The time taken to solve the problem is, {str(solve_duration)}")
+
         except Exception as e:
             self.get_logger().info(f"MPC error : {e}")
             return
+    
         
         # self.get_logger().info(str(x.value))
 
@@ -108,8 +139,8 @@ class CartPendulumBalancer(Node):
             msg = Float64MultiArray()
             msg.data = [float(control_command)]
             publish_time = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S.%f')
-            # self.get_logger().info(f"The publish time is {publish_time}")
-            # self.publisher.publish(msg)
+            self.get_logger().info(f"The state @ publish time  {publish_time} is {current_state}")
+            self.publisher.publish(msg)
             # self.get_logger().info(f"The difference between published time and the time of computation is {float(publish_time[-8:-1])-float(current_time[-8:-1])}")
             # self.get_logger().info(str(msg))
         else:

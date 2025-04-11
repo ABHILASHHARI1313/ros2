@@ -4,7 +4,7 @@
 
   <!-- Constants for robot dimensions -->
   <xacro:property name="PI" value="3.1415926535897931"/>
-  <xacro:property name="mass_slider" value="100" /> <!-- arbitrary value for mass -->
+  <xacro:property name="mass_slider" value="10" /> <!-- arbitrary value for mass -->
   <xacro:property name="mass_cart" value="20.0" /> <!-- arbitrary value for mass -->
   <xacro:property name="mass_pole" value="2.0" /> <!-- arbitrary value for mass -->
   <xacro:property name="width" value="0.25" /> <!-- cart width -->
@@ -31,7 +31,7 @@
     <child link="slidebar"/>
     <origin xyz="0 0 1"/>
   </joint>
-        <state_interface name="effort"/>
+
   <!-- Slider Link -->
   <link name="slidebar">
     <visual>
@@ -46,9 +46,9 @@
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="${mass_slider}"/>
       <inertia
-	  ixx="${mass_slider*length_slider*length_slider/12}" ixy="0.0" ixz="0.0"
-	  iyy="0.0" iyz="0.0"
-	  izz="${mass_slider*length_slider*length_slider/12}"/>
+	  ixx="${(1/12)*mass_slider*(radius*radius+radius*radius)}" ixy="0.0" ixz="0.0"
+	  iyy="${(1/12)*mass_slider*(length_slider*length_slider+radius*radius)}" iyz="0.0"
+	  izz="${(1/12)*mass_slider*(length_slider*length_slider+radius*radius)}"/>
     </inertial>
   </link>
 
@@ -57,8 +57,8 @@
     <child link="cart"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit effort="1000.0" lower="-3.5" upper="3.5" velocity="100.0"/>
-    <dynamics damping="0.0"/>
+    <limit effort="100.0" lower="-3.5" upper="3.5" velocity="100.0"/>
+    <dynamics damping="0.0" friction="0.5"/>
     <transmission name="transmission_slider">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="slider_to_cart">
@@ -92,9 +92,9 @@
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="${mass_cart}"/>
       <inertia
-	  ixx="${mass_cart*(depth*depth+height*height)/12}" ixy="0.0" ixz="0.0"
-	  iyy="${mass_cart*(depth*depth+width*width)/12}" iyz="0.0"
-	  izz="${mass_cart*(width*width+height*height)/12}"/>
+	  ixx="${(1/12)*mass_cart*(depth*depth+height*height)}" ixy="0.0" ixz="0.0"
+	  iyy="${(1/12)*mass_cart*(width*width+height*height)}" iyz="0.0"
+	  izz="${(1/12)*mass_cart*(width*width+depth*depth)}"/>
     </inertial>
   </link>
 
@@ -128,9 +128,9 @@
       <origin xyz="0 0 ${length_pole/2}" rpy="0 0 0"/>
       <mass value="${mass_pole}"/>
       <inertia
-	  ixx="${mass_pole*(radius_pole*radius_pole+length_pole*length_pole)/12}" ixy="0.0" ixz="0.0"
-	  iyy="${mass_pole*(radius_pole*radius_pole+radius_pole*radius_pole)/12}" iyz="0.0"
-	  izz="${mass_pole*(radius_pole*radius_pole+length_pole*length_pole)/12}"/>
+	  ixx="${(1/12)*mass_pole*(radius_pole*radius_pole+length_pole*length_pole)}" ixy="0.0" ixz="0.0"
+	  iyy="${(1/12)*mass_pole*(radius_pole*radius_pole+length_pole*length_pole)}" iyz="0.0"
+	  izz="${(1/12)*mass_pole*(radius_pole*radius_pole+radius_pole*radius_pole)}"/>
     </inertial>
   </link>
 
