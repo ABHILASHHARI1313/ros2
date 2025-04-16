@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             "test = mpc_control.test:main",
-            "final = mpc_control.final:main"
+            "final = mpc_control.final:main",
+            "time = mpc_control.time:main",
         ],
     },
 )

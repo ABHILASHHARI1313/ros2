@@ -4,7 +4,6 @@ import rclpy
 from rclpy.node import Node
 import control 
 import numpy as np
-import threading
 from scipy import sparse
 from std_msgs.msg import Float64MultiArray
 import matplotlib.pyplot as plt
@@ -74,8 +73,6 @@ class CartPendulumBalancer(Node):
         self.controller = MPCController(A_zoh, B_zoh, Np=N, Qx=Q, Qu=R, xref=xr)
         self.controller.setup()
         # time.sleep(0.5)
-        self.timer = self.create_timer(0.01,self.balance)
-        self.lock  = threading.Lock()
         ''' For visualization purpose '''
         self.cart_pos = []
         self.pend_ang = []
@@ -85,42 +82,30 @@ class CartPendulumBalancer(Node):
     def joint_state_callback(self,msg):
         current_time = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S.%f')
         self.get_logger().info(f"The current time is {current_time}")
-        with self.lock:
-            position = msg.position
-            velocity = msg.velocity
-            self.x0[0] = position[0]
-            self.x0[2] = -position[1]
-            self.x0[1] = velocity[0]
-            self.x0[3] = -velocity[1]
+        position = msg.position
+        velocity = msg.velocity
+        self.x0[0] = position[0]
+        self.x0[2] = -position[1]
+        self.x0[1] = velocity[0]
+        self.x0[3] = -velocity[1]
 
         ''' For visualization purpose '''
         self.cart_pos.append(position[0])
         self.pend_ang.append(velocity[0])
 
-
-
-        # self.get_logger().info(f"The current state is {self.x0}")
-        
-
-    def solver(self):
-        # self.get_logger().info(f"The current state is {self.x0}")
-        with self.lock:
-            self.controller.update(self.x0)
+        self.controller.update(self.x0)
         u = self.controller.output()
-        return u.item()
-    
-    def balance(self):
-            try:
-                effort = self.solver()
-                self.ctrl_effort.append(effort)
-            except Exception as e:
-                self.get_logger().info(f"The error is {e}")
-                return
-            msg = Float64MultiArray()
-            msg.data = [float(effort)]
-            publish_time = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S.%f')
-            self.get_logger().info(f"The publish time is {publish_time}")
-            self.publisher.publish(msg)
+        try:
+            effort = u.item()
+            self.ctrl_effort.append(effort)
+        except Exception as e:
+            self.get_logger().info(f"The error is {e}")
+            return
+        msg = Float64MultiArray()
+        msg.data = [float(effort)]
+        publish_time = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S.%f')
+        self.get_logger().info(f"The publish time is {publish_time}")
+        self.publisher.publish(msg)
 
 def plot_results(cart_pos,pend_ang,ctrl_effort):
    plt.figure(figsize=(8, 4))

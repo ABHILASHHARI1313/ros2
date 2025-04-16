@@ -25,7 +25,7 @@ setup(
             'force = cart_control.force:main',
             'test = cart_control.test:main',
             'timer = cart_control.timer:main',
-            'github = cart_control.github:main'
+            'pympc = cart_control.pympc:main'
         ],
     },
 )

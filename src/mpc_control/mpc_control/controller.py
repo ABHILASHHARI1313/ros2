@@ -427,6 +427,7 @@ class MPCController:
         else:
             pass
 
+
         q_U = np.zeros(Nc*nu)
         if self.JU_ON:
             self.J_CNST += 1/2* Np * (uref.dot(Qu.dot(uref)))
@@ -542,7 +543,6 @@ class MPCController:
                                  sparse.hstack([sparse.csc_matrix((Np - Nc, Nc - 1)), np.ones((Np - Nc, 1))])
                                 ])
         Bu = sparse.kron(iBu, Bd)
-
         n_eps = (Np + 1) * nx
         Aeq_dyn = sparse.hstack([Ax, Bu])
         if self.SOFT_ON:
@@ -579,7 +579,15 @@ class MPCController:
         lineq_du = np.kron(np.ones(Nc+1), Dumin) #np.ones((Nc+1) * nu)*Dumin
         lineq_du[0:nu] += self.uminus1[0:nu] # works for nonscalar u?
 
+        # Positivity of slack variables (not necessary!)
+        #Aineq_eps_pos = sparse.hstack([sparse.coo_matrix((n_eps,(Np+1)*nx)), sparse.coo_matrix((n_eps, Np*nu)), sparse.eye(n_eps)])
+        #lineq_eps_pos = np.zeros(n_eps)
+        #uineq_eps_pos = np.ones(n_eps)*np.inf
 
+        # - OSQP constraints
+        #A = sparse.vstack([Aeq_dyn, Aineq_x, Aineq_u, Aineq_du, Aineq_eps_pos]).tocsc()
+        #l = np.hstack([leq_dyn, lineq_x, lineq_u, lineq_du, lineq_eps_pos])
+        #u = np.hstack([ueq_dyn, uineq_x, uineq_u, uineq_du, uineq_eps_pos])
 
         A = sparse.vstack([Aeq_dyn, Aineq_x, Aineq_u, Aineq_du]).tocsc()
         l = np.hstack([leq_dyn, lineq_x, lineq_u, lineq_du])
@@ -598,6 +606,6 @@ class MPCController:
         self.u = u
 
         self.P_X = P_X
-
+        
 
 
