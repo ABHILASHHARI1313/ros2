@@ -251,7 +251,6 @@ class MPCController:
         self.J_CNST = None # Constant term of the cost function
 
     def setup(self, solve = True):
-
         """ Set-up the QP problem.
 
         Parameters
@@ -352,10 +351,6 @@ class MPCController:
         Ad = self.Ad
         Bd = self.Bd
         x0 = self.x0
-        xmin = self.xmin
-        xmax = self.xmax
-        umin = self.umin
-        umax = self.umax
 
 
         # Cast MPC problem to a QP: x = (x(0),x(1),...,x(N),u(0),...,u(N-1))
@@ -392,19 +387,10 @@ class MPCController:
         leq_dyn = np.hstack([-x0, np.zeros(Np * nx)])
         ueq_dyn = leq_dyn # for equality constraints -> upper bound  = lower bound!
 
-        # - bounds on x
-        Aineq_x = sparse.hstack([sparse.eye((Np + 1) * nx), sparse.csc_matrix(((Np+1)*nx, Nc*nu))])
-        lineq_x = np.kron(np.ones(Np + 1), xmin) # lower bound of inequalities
-        uineq_x = np.kron(np.ones(Np + 1), xmax) # upper bound of inequalities
-        
-        # - bounds on u
-        Aineq_u = sparse.hstack([sparse.csc_matrix((Nc*nu, (Np+1)*nx)), sparse.eye(Nc * nu)])
-        lineq_u = np.kron(np.ones(Nc), umin)     # lower bound of inequalities
-        uineq_u = np.kron(np.ones(Nc), umax)     # upper bound of inequalities
 
-        A = sparse.vstack([Aeq_dyn, Aineq_x, Aineq_u]).tocsc()
-        l = np.hstack([leq_dyn, lineq_x, lineq_u])
-        u = np.hstack([ueq_dyn, uineq_x, uineq_u])
+        A = sparse.vstack([Aeq_dyn]).tocsc()
+        l = np.hstack([leq_dyn])
+        u = np.hstack([ueq_dyn])
 
         self.P = sparse.block_diag([P_X, P_U], format='csc')
         self.q = np.hstack([q_X, q_U])
