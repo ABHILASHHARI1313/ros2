@@ -130,7 +130,7 @@
       <inertia ixx="0.016666666666666666" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.016666666666666666"/>
     </inertial>
   </link>
-  <!-- Transmission for ros2_control
+  <!-- Transmission for ros2_control -->
   <transmission name="transmission_slider">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="slider_to_cart">
@@ -140,5 +140,5 @@
       <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
-  </transmission> -->
+  </transmission>
 </robot>

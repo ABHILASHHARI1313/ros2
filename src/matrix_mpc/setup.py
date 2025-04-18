@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'cart_control'
+package_name = 'matrix_mpc'
 
 setup(
     name=package_name,
@@ -20,11 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'get_angle = cart_control.get_angle:main',
-            'mpc = cart_control.mpc:main',
-            'force = cart_control.force:main',
-            'test = cart_control.test:main',
-            'timer = cart_control.timer:main',
+            "my_mpc = matrix_mpc.my_mpc:main",
         ],
     },
 )

@@ -23,6 +23,7 @@ setup(
             "test = mpc_control.test:main",
             "final = mpc_control.final:main",
             "time = mpc_control.time:main",
+            "seek = mpc_control.seek:main",
         ],
     },
 )

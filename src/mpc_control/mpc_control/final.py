@@ -164,7 +164,7 @@ def main():
         cart_pos  = node.cart_pos
         pend_ang = node.pend_ang
         ctrl_effort = node.ctrl_effort
-        # plot_results(cart_pos,pend_ang,ctrl_effort) 
+        plot_results(cart_pos,pend_ang,ctrl_effort) 
         node.destroy_node()
         rclpy.shutdown()
 

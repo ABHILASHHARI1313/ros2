@@ -16,7 +16,7 @@ M = 20  # Cart mass
 m = 2  # Pendulum mass
 b = 0.1  # Coefficient of friction for cart
 l = 0.5  # Length to pendulum center of mass
-I = (m*l**2)*(1/12)  # Mass moment of inertia of the pendulum
+I = (m*l**2)*(1/3)  # Mass moment of inertia of the pendulum
 g = 9.8  # Gravity
 dt = 0.1  # Time step
 
@@ -57,7 +57,7 @@ xr *= -1
 N = 10 # length of horizon
 dt = 0.1 # time step
 
-nsim = 100 # number of simulation steps
+nsim = 1000 # number of simulation steps
 
 class CartPendulumBalancer(Node):
     def __init__(self):

@@ -3,10 +3,6 @@ import rclpy
 from rclpy.node import Node
 import control 
 import numpy as np
-import threading
-from std_msgs.msg import String
-from rosgraph_msgs.msg import Clock
-from scipy import sparse
 from std_msgs.msg import Float64MultiArray
 import cvxpy as cp
 from datetime import datetime
@@ -20,7 +16,7 @@ b = 0.1  # Coefficient of friction for cart
 l = 0.5  # Length to pendulum center of mass
 I = (m*l**2)*(1/3)  # Mass moment of inertia of the pendulum
 g = 9.8  # Gravity
-dt = 0.2 # Time step
+dt = 0.1 # Time step
 
 
 p = I*(M+m)+M*m*l**2
@@ -55,14 +51,13 @@ Q_u = np.diag([0.1])                       # Less penalty on effort
 Q_delta_u = np.diag([1.0])                  # Smooth input changes
 Q_terminal = Q_x.copy()                    # Same as Q_x
 
-x_ref = np.array([1.0, 0.0, 0.0, 0.0]).astype(float)  # Desired states
+x_ref = np.array([2.0, 0.0, 0.0, 0.0]).astype(float)  # Desired states
 # xr *= -1.0
 N = 30 # length of horizon
-dt = 0.01 # time step
+# dt = 0.01 # time step
 u_ref = np.array([0.0])
 u_prev = np.array([0.0])
 
-nsim = 20 # number of simulation steps
 
 class CartPendulumBalancer(Node):
     def __init__(self):
@@ -71,29 +66,25 @@ class CartPendulumBalancer(Node):
         self.state_variable_sub = self.create_subscription(JointState,'/joint_states',self.joint_state_callback,10)
 
         self.x0 = np.array([0.0, 0.0, 0.0, 0.0]).astype(float) # Current states
-        self.timer = self.create_timer(dt,self.balance)
-        self.lock  = threading.Lock()
         self.angle_change = []
 
 
     def joint_state_callback(self,msg):
         current_time = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S.%f')
-        with self.lock:
-            position = msg.position
-            velocity = msg.velocity
-            self.x0[0] = position[0]
-            self.x0[2] = -position[1]
-            self.x0[1] = velocity[0]
-            self.x0[3] = -velocity[1]
-        self.get_logger().info(f"The current state @  time {current_time} is {str(self.x0)}")
+        self.get_logger().info(f"The current time is {current_time}")
+        position = msg.position
+        velocity = msg.velocity
+        self.x0[0] = position[0]
+        self.x0[2] = -position[1]
+        self.x0[1] = velocity[0]
+        self.x0[3] = -velocity[1]
+        # self.get_logger().info(f"The current state @  time {current_time} is {str(self.x0)}")
         # self.get_logger().info(f"The state at time {current_time} is {str(self.x0)}")
         # self.angle_change.append(position[1])
     
-    def balance(self):
         x = cp.Variable((nx, N+1))
         u = cp.Variable((nu, N))
-        with self.lock:
-            current_state = self.x0.copy()
+        current_state = self.x0.copy()
         cost = 0.0
         # self.get_logger().info(str(x_init.value))
         # publish_time = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S.%f')
@@ -139,8 +130,10 @@ class CartPendulumBalancer(Node):
             msg = Float64MultiArray()
             msg.data = [float(control_command)]
             publish_time = datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S.%f')
-            self.get_logger().info(f"The state @ publish time  {publish_time} is {current_state}")
+            # self.get_logger().info(f"The state @ publish time  {publish_time} is {current_state}")
+            self.get_logger().info(f"The publish time is {publish_time}")
             self.publisher.publish(msg)
+            u_prev[:] = control_command 
             # self.get_logger().info(f"The difference between published time and the time of computation is {float(publish_time[-8:-1])-float(current_time[-8:-1])}")
             # self.get_logger().info(str(msg))
         else:

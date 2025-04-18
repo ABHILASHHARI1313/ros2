@@ -9,7 +9,7 @@ from std_msgs.msg import Float64MultiArray
 import matplotlib.pyplot as plt
 from datetime import datetime
 import time
-from mpc_control.controller import MPCController
+from matrix_mpc.matrix_mpc import MPCController
 from rclpy.qos import QoSProfile, QoSHistoryPolicy, QoSReliabilityPolicy
 
 ''' Pendulum Dynamics in States Space Equation '''
